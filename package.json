@@ -1,0 +1,14 @@
+{
+  "name": "vue-fi-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^0.12.2"
+  },
+  "scripts": {
+    "blog:dev": "vitepress dev blog",
+    "blog:build": "vitepress build blog",
+    "blog:serve": "vitepress serve blog"
+  }
+}
