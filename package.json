@@ -4,9 +4,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "yarn cypress run --headed",
+    "test-open": "yarn cypress open",
+    "test-ci": "yarn cypress run"
   },
   "dependencies": {
+    "cypress": "^6.8.0",
     "vue": "^3.0.5"
   },
   "devDependencies": {
