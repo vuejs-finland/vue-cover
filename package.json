@@ -1,14 +1,19 @@
 {
   "name": "vue-fi-blog",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "vitepress": "^0.12.2"
-  },
+  "version": "0.0.0",
   "scripts": {
-    "blog:dev": "vitepress dev blog",
-    "blog:build": "vitepress build blog",
-    "blog:serve": "vitepress serve blog"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.1.5",
+    "@vue/compiler-sfc": "^3.0.5",
+    "typescript": "^4.1.3",
+    "vite": "^2.1.0",
+    "vue-tsc": "^0.0.8"
   }
 }
