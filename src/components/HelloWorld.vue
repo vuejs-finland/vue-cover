@@ -50,7 +50,8 @@ export default defineComponent({
   props: {
     msg: {
       type: String,
-      required: true
+      required: true,
+      default: "Hello Vue 3"
     }
   },
   setup: () => {
