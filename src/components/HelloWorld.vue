@@ -33,9 +33,14 @@
       target="_blank"
     >Vue 3 Docs</a>
   </p>
-
-  <button @click="count++">
-    count is: {{ count }}
+  <p>
+    counter is {{ counter }}
+  </p>
+  <button
+    class="hello_world__button"
+    @click="increaseCounter"
+  >
+    increase counter
   </button>
   <p>
     Edit
@@ -44,7 +49,9 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { defineComponent } from 'vue'
+import { mapState, mapActions } from "vuex";
+
 export default defineComponent({
   name: 'HelloWorld',
   props: {
@@ -54,10 +61,12 @@ export default defineComponent({
       default: "Hello Vue 3"
     }
   },
-  setup: () => {
-    const count = ref(0)
-    return { count }
-  }
+  computed: {
+    ...mapState(["counter"]),
+  },
+  methods: {
+    ...mapActions(["increaseCounter"]),
+  },
 })
 </script>
 
