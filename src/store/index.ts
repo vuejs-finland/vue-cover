@@ -1,17 +1,18 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
+import { CounterActions } from '../types/enums';
 
 const store = createStore({
     state: {
       counter: 0
     },
     mutations: {
-      increaseCounter(state) {
+      [CounterActions.INCREASE] (state) {
         state['counter'] = state['counter'] + 1;
       },
     },
     actions: {
       increaseCounter({ commit }) {
-        commit("increaseCounter");
+        commit(CounterActions.INCREASE);
       },
     },
     modules: {
