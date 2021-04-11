@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router';
 
-interface RoutesType {
+export type RoutesType = RouteRecordRaw & {
   path: string;
   name: string;
   component: () => {};
@@ -9,23 +10,27 @@ interface RoutesType {
     keepAlive?: boolean;
   };
   children?: RoutesType[];
-}
+};
 
 const routes: RoutesType[] = [
   {
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ '../components/HelloWorld.vue'),
+    component: () => import(/* webpackChunkName: "home" */ '../pages/Home.vue'),
+  },
+  {
+    path: '/hello',
+    name: 'Hello',
+    component: () => import(/* webpackChunkName: "hello" */ '../components/Hello.vue'),
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import(/* webpackChunkName: "home" */ '../components/About.vue'),
+    component: () => import(/* webpackChunkName: "about" */ '../components/About.vue'),
   },
 ]
 
 const router = createRouter({
-  // // createWebHistory 第一个参数为以前路由的base
   history: createWebHistory(),
   routes
 })

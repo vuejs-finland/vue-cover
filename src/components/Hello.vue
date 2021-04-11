@@ -53,7 +53,7 @@ import { defineComponent } from 'vue'
 import { mapState, mapActions } from "vuex";
 
 export default defineComponent({
-  name: 'HelloWorld',
+  name: 'Hello',
   props: {
     msg: {
       type: String,
