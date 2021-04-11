@@ -12,12 +12,15 @@
     "lint-fix": "yarn eslint \"src/**/*.{js,vue}\" --fix"
   },
   "dependencies": {
+    "buefy": "^0.9.6",
     "cypress": "^6.8.0",
+    "lodash": "^4.17.21",
     "vue": "^3.0.5",
     "vue-router": "4",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.168",
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.5",
     "eslint": "^7.22.0",
