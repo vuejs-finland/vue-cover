@@ -1,7 +1,7 @@
 describe('router', () => {
   it('Visit home page', () => {
     cy.visit('/')
-    cy.contains('Hello Vue 3')
+    cy.contains('home page')
   })
 
   it('Visit about page', () => {
